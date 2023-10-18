@@ -32,7 +32,6 @@ resource "aws_instance" "IgneJone_instance" {
 
 resource "aws_s3_bucket" "IgneJone_bucket" {
   bucket = var.S3_BUCKET_NAME
-  acl    = "private"
 
   tags = {
     Name = "IgneJone"
