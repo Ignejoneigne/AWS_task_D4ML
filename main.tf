@@ -1,7 +1,6 @@
-#provider "aws" {
-#  region = var.AWS_region
-#  profile = "default"
-#}
+/*provider "aws" {
+  region = var.AWS_region
+  profile = "default"
 
 terraform {
   required_providers {
@@ -12,22 +11,16 @@ terraform {
   }
 }
 
+*/
 
-provider "aws" {
-  region = "eu-central-1"
-  profile = "default"
-}
 
-resource "aws_instance" "IgneJone_instance" {
+resource "aws_instance" "IgneJone_instance_1" {
   ami           = var.AMI_ID
   instance_type = var.INSTANCE_TYPE
   iam_instance_profile = var.IAM_INSTANCE_PROFILE
 
   user_data = file("user_data.sh")
 
-  tags = {
-    Name = "IgneJone"
-  }
 }
 
 resource "aws_s3_bucket" "IgneJone_bucket" {
