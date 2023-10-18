@@ -1,49 +1,44 @@
 variable "AWS_REGION" {
   type    = string
-  default = "eu-central-1"
+  description = "The AWS region where resources will be created."
 }
 
 variable "PRIVATE_IP_CIDR" {
   type    = string
-  default = "192.168.1.147/32"
+  description = "The private IP CIDR for EC2 instance."
 }
 
 variable "S3_BUCKET_NAME" {
   type    = string
-  default = "d4ml-bucket/Ignes"
+  description = "The name of the S3 bucket for storing data."
 }
 
 variable "AMI_ID" {
   type    = string
-  default = "ami-08a34e890d3f70022"
+  description = "The ID of the Amazon Machine Image (AMI) to use for the EC2 instance."
 }
 
 variable "KEY_PAIR_NAME" {
   type    = string
-  default = "ignekp"
+  description = "The name of the EC2 key pair to associate with the instance."
 }
 
 variable "IAM_INSTANCE_PROFILE" {
   type    = string
-  default = "role-d4ml-cloud9-deployment"
+  description = "The name of the IAM instance profile to associate with the EC2 instance."
 }
 
 variable "SECURITY_GROUP" {
   type    = string
-  default = "igne_group_2023"
+  description = "The ID of the security group for the EC2 instance."
 }
 
 variable "INSTANCE_TYPE" {
   type    = string
-  default = "t2.micro"
+  description = "The type of the EC2 instance to create."
 }
 
 variable "INSTANCE_NAME" {
   type    = string
-  default = "AWS_Igne"
-}
-
-variable "user_data" {
-  type    = string
-  default = "cd AWS_task"
+  description = "The name of the EC2 instance."
 }
