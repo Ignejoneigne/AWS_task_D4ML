@@ -6,4 +6,4 @@ KEY_PAIR_NAME="ignekp"
 IAM_INSTANCE_PROFILE="role-d4ml-cloud9-deployment"
 SECURITY_GROUP="sg-095ce500da640e0a9"
 INSTANCE_TYPE="t2.micro"
-INSTANCE_NAME="AWS_Igne"
+INSTANCE_NAME="AWS_Igne_test" #change it later
